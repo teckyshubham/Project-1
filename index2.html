@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping site</title>
+    <link src="index1.css">
+    <style>
+        body {
+            background-color: #41416e;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(7, 20, 43);
+            position: fixed;
+            width: 97vw;
+            top: 0;
+        }
+        
+        .navbar img,
+        a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .favourite {
+            margin-left: 50px;
+        }
+        
+        .navbar a:hover {
+            background-color: black;
+            padding: 10px 10px;
+            color: grey;
+        }
+        
+        .navbar img {
+            height: 50px;
+            width: 50px;
+            border-radius: 40px;
+            padding: 10px 16px;
+        }
+        
+        .ninjasstudios {
+            padding: 20px 0px;
+        }
+        
+        .navbar input[type=text],
+        button {
+            display: block;
+            background-color: #2d2d31;
+            /*background-color: transparent;*/
+            float: right;
+            border: none;
+            margin-top: 20px;
+            /*margin-right: 20px;*/
+            font-size: 20px;
+            height: 26px;
+        }
+        
+        .navbar button {
+            padding: 2px;
+            margin: 0px;
+            border: none;
+            margin-top: 20px;
+            height: 28px;
+        }
+        
+        .fa {
+            color: grey;
+        }
+        
+        .microphone {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+        .recorder {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .profile {
+            float: right;
+            height: 50px;
+            width: 50px;
+            border-radius: 40px;
+            padding: 0px 16px;
+            margin-top: 5px;
+        }
+        
+        .notification {
+            float: right;
+            padding: 20px 20px;
+            margin-right: 7px;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        
+        .class1 {
+            position: relative;
+            border: 2px solid white;
+            background-color: rgb(88, 100, 100);
+            width: 101%;
+            height: 500px;
+            margin-left: -8px;
+            margin-top: -10px;
+        }
+        
+        .class2 {
+            border: 2px solid white;
+            background-color: rgb(47, 92, 92);
+            width: 101%;
+            height: 500px;
+            margin-left: -8px;
+            margin-top: -10px;
+            display: flex;
+        }
+        
+        .class3 {
+            position: relative;
+            border: 2px solid white;
+            background-color: rgb(87, 15, 31);
+            width: 101%;
+            height: 500px;
+            margin-left: -8px;
+            display: flex;
+            margin-top: -10px;
+        }
+        
+        .class4 {
+            position: relative;
+            border: 2px solid white;
+            background-color: rgb(73, 150, 29);
+            width: 101%;
+            height: 500px;
+            display: flex;
+            margin-left: -8px;
+            margin-top: -10px;
+        }
+        
+        .class5 {
+            border: 2px solid white;
+            background-color: rgb(209, 105, 35);
+            width: 101%;
+            height: 500px;
+            margin-left: -8px;
+            margin-top: -10px;
+        }
+        
+        .class6 {
+            position: relative;
+            border: 2px solid white;
+            background-color: rgb(73, 150, 29);
+            width: 101%;
+            height: 500px;
+            margin-left: -8px;
+            margin-top: -10px;
+        }
+        
+        .class7 {
+            border: 2px solid white;
+            background-color: #41416e;
+            width: 101%;
+            height: 20px;
+            margin-left: -8px;
+            margin-top: -10px;
+            color: white;
+        }
+        
+        .img_class1 {
+            height: 98%;
+            width: 100%;
+            <!-- opacity: 0.8;
+            -->
+        }
+        
+        .second_left {
+            width: 50%;
+            height: 100%;
+            border: 2px solid white;
+        }
+        
+        .second_right {
+            width: 50%;
+            height: 100%;
+            border: 2px solid white;
+        }
+        
+        .second_left_left {
+            width: 50%;
+            height: 100%;
+        }
+        
+        .second_left_right {
+            width: 50%;
+            height: 100%;
+            color: white;
+            margin-left: 350px;
+            margin-top: -300px;
+        }
+        
+        .second_right_left {
+            width: 50%;
+            height: 100%;
+        }
+        
+        .second_right_right {
+            width: 50%;
+            height: 100%;
+            color: white;
+            margin-left: 350px;
+            margin-top: -300px;
+        }
+        
+        .third_left {
+            width: 40%;
+            height: 100%;
+            border: 2px solid white;
+        }
+        
+        .third_right {
+            width: 60%;
+            height: 100%;
+            border: 2px solid white;
+        }
+        
+        .third_right:hover {
+            width: 70%;
+        }
+        
+        .img_class3 {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .fourth_left {
+            width: 70%;
+            height: 100%;
+            border: 2px solid white;
+        }
+        
+        .fourth_right {
+            width: 30%;
+            height: 100%;
+            opacity: 0.8;
+            border: 2px solid white;
+        }
+        
+        .fourth_right:hover {
+            width: 50%;
+        }
+        
+        .img_6 {
+            height: 100%;
+            width: 100%;
+            opacity: 0.7;
+        }
+        
+        .social_icons {
+            margin-top: 40px;
+            display: flex;
+            margin-left: 682px;
+        }
+        
+        .facebook {
+            margin-top: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .youtube {
+            margin-top: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .instagram {
+            margin-top: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .twiter {
+            margin-top: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .pinrest {
+            margin-top: 2px;
+            height: 30px;
+            width: 30px;
+        }
+        
+        .enter_name {
+            display: flex;
+        }
+        
+        .class1_text {
+            position: absolute;
+            top: 145px;
+            border: 2px solid white;
+            left: 80px;
+            color: aliceblue;
+            margin-left: 601px;
+        }
+        
+        .class1_text2 {
+            position: absolute;
+            top: 215px;
+            left: 712px;
+            font-size: 33px;
+            color: white;
+            background-color: black;
+            height: 28px;
+        }
+        
+        .temp {
+            margin-top: -9px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- <img src="https://pbs.twimg.com/profile_images/945541608719519745/j2TgKUQn.jpg"> -->
+        <a class="ninjasstudios" href="#ninjasstudio">Home</a>
+        <a href="#Favourites" class="favourite">MEN</a>
+        <a href="#profile" class="profile">Women</a>
+        <a href="#notifiaction" class="notification">Kids</a>
+        <button type="submit" class="microphone">BOYS<button>
+        <input type="text" placeholder="Search..">
+        <button type="submit" class="recorder">SHOES</button>
+    </div>
+
+    <div class="class1">
+        <img class="img_class1" src="https://images.pexels.com/photos/189199/pexels-photo-189199.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+        <center class="class1_text">
+            <h1>SUMMER</h1>
+        </center>
+        <center class="class1_text2">
+            <h4 class="temp">saving</h4>
+        </center>
+
+    </div>
+    <div class="class2">
+        <div class="second_left">
+            <div class="second_left_left">
+                <img class="img_class1" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPTHE-DRY-STATTHE-8788620A7A244/1593414243738_0..jpg?imwidth=282&impolicy=hq">
+            </div>
+            <div class="second_left_right">
+                <center>
+                    <h1>T-Shirt</h1>
+                </center>
+                <center>
+                    <h4>New-Stock</h4>
+                </center>
+            </div>
+        </div>
+        <div class="second_right">
+            <div class="second_right_left">
+                <img class="img_class1" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPTHE-DRY-STATTHE-8788620A7A244/1593414243738_0..jpg?imwidth=282&impolicy=hq">
+            </div>
+            <div class="second_right_right">
+                <center>
+                    <h1>Sweatshirt</h1>
+                </center>
+                <center>
+                    <h4>Clerance sale</h4>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="class3">
+        <div class="third_left">
+            <img class="img_class3" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPTHE-DRY-STATTHE-8788620A7A244/1593414243738_0..jpg?imwidth=282&impolicy=hq">
+        </div>
+        <div class="third_right">
+            <center style="position: absolute;    margin-left: 97px;
+            color: #482929;
+            margin-top: 260px;">
+                <h1>Sale is live on Sweatshirt</h1>
+                <h1>Buy Imediately</h1>
+            </center>
+            <img class="img_class3" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPTHE-DRY-STATTHE-8788620A7A244/1593414243738_0..jpg?imwidth=282&impolicy=hq">
+        </div>
+    </div>
+
+
+    <div class="class6">
+        <img class="img_6" src="https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <center style="position: absolute; top:10px;margin-left:550px;font-size:30px;color:aliceblue">
+            <h1>Mailing List</h1>
+        </center>
+        <center style="position: absolute; top:70px ;margin-left:400px;font-size:30px;color:aliceblue">
+            <h4>Join on the Mainling list nad get the latest gift</h4>
+        </center>
+        <center>
+            <div class="enter_name">
+                <div>
+                    <input type="text" placeholder="Enter your name" style="position: absolute; top:161px ;margin-left:490px;font-size:30px;color:aliceblue">
+                </div>
+                <div>
+                    <button style="    position: absolute;
+                    top: 142px;
+                    height: 40px;
+                    background-color: aqua;
+                    left: 490px;
+                    margin-left: 400px;
+                    font-size: 30px;
+                    color: aliceblue;">
+                        Join
+                    </button>
+                </div>
+            </div>
+
+        </center>
+    </div>
+    <div class="class7">
+        <div class="social_icons">
+            <div class="facebook"><img class="img_class3" src="https://img.icons8.com/fluent/344/facebook-new.png"></div>
+            <div class="youtube"><img class="img_class3" src="https://img.icons8.com/color/344/youtube-play.png"></div>
+            <div class="instagram"><img class="img_class3" src="https://img.icons8.com/fluent/344/instagram-new.png"></div>
+            <div class="pinrest"><img class="img_class3" src="https://img.icons8.com/plasticine/2x/bookmark--v2.gif"></div>
+            <div class="twiter"><img class="img_class3" src="https://img.icons8.com/color/344/twitter--v1.png"></div>
+        </div>
+        <center>
+            <h4>2018 privacy clause copy right statement</h4>
+        </center>
+        <center>
+            <h1><span style="    color: #999999;
+                font-size: 20px;">load of stuff on</span> Walokover.com</h1>
+        </center>
+    </div>
+</body>
+
+</html>
